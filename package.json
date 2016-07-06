@@ -4,6 +4,7 @@
   "description": "Finds synonyms",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
