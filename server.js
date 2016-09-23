@@ -6,7 +6,9 @@ var querystring = require('querystring');
 var server = http.createServer(function(req, res) {
   var qs = url.parse(req.url, true).query;
   res.writeHead(200, {"Content-Type": "application/json"});
-  res.write(JSON.stringify(thesaurus.find(qs.phrase)));
+  if (qs.phrase) {
+    res.write(JSON.stringify(thesaurus.find(qs.phrase.toLowerCase())));
+  }
   res.end();
 });
 
