@@ -9,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "profanity-util": "0.0.5",
     "thesaurus": "0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshski/thesaurusrus.git"
   }
 }
