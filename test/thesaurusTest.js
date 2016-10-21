@@ -2,6 +2,10 @@ var expect = require('chai').expect;
 var thesaurus = require('../filteredThesaurus');
 
 describe('thesaurus', function() {
+  it('does not return synonyms for single letter phrases', function() {
+    expect(thesaurus.find('a')).to.eql([]);
+  })
+
   it('does not include the phrase in the results', function() {
     expect(thesaurus.find('Happy').indexOf('happy')).to.eql(-1);
   })
