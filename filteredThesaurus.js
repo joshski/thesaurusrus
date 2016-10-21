@@ -8,7 +8,7 @@ module.exports = {
       return [];
     }
     return thesaurus.find(normalisedPhrase).filter(function(word) {
-      return swearWords.indexOf(word) == -1;
+      return swearWords.indexOf(word) == -1 && word != normalisedPhrase;  
     });
   }
 }

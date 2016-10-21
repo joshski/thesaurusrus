@@ -2,6 +2,10 @@ var expect = require('chai').expect;
 var thesaurus = require('../filteredThesaurus');
 
 describe('thesaurus', function() {
+  it('does not include the phrase in the results', function() {
+    expect(thesaurus.find('Happy').indexOf('happy')).to.eql(-1);
+  })
+
   it('filters profane phrases', function() {
     expect(thesaurus.find('Sexy')).to.eql([]);
   })
