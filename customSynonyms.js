@@ -1,6 +1,6 @@
 module.exports = {
   'speed': ['pace', 'rate', 'velocity', 'momentum', 'tempo', 'acceleration', 'agility', 'quickness', 'activity', 'alacrity', 'breeze', 'briskness', 'rapidness', 'readiness', 'rush', 'rustle', 'snap', 'steam', 'swiftness',
-    'urgency', 'speediness', 'race', 'fly', 'zoom', 'zip', 'break the speed', 'drive too fast', 'gear up''hurry', 'hustle','run','rush', 'gather', 'gear up', 'get a move on', 'get moving', 'get under way', 'go all out','go fast', 'go like the wind',
+    'urgency', 'speediness', 'race', 'fly', 'zoom', 'zip', 'break the speed', 'drive too fast', 'gear up','hurry', 'hustle','run','rush', 'gather', 'gear up', 'get a move on', 'get moving', 'get under way', 'go all out','go fast', 'go like the wind',
     'lose no time', 'make haste', 'open up', 'throttle', 'press on', 'step on it'],
   'decision': ['choice', 'result', 'conclusion', 'verdict', 'pronouncement', 'judgement', 'resolution', 'assesment', 'evaluation', 'ruiling', 'finding', 'outcome', 'decree', 'accord', 'agreement', 'arrangement', 'compromise', 'determination', 'decisiveness',
     'backbone', 'doggedness', 'earnestness', 'grit', 'obstinacy', 'will power'],
@@ -15,7 +15,8 @@ module.exports = {
   'baby': ['infant', 'child', 'newborn', 'babe in arms', 'tot', 'little one', 'kid', 'chick', 'toddler', 'youngster', 'bairn', 'bambino', 'bundle', 'buttercup', 'button', 'cherub', 'crawler', 'deduction', 'dividend',
    'dumpling', 'nipper', 'nursling', 'papoose', 'preemie', 'suckling', 'tad', 'write-off', 'angelface', 'little angel', 'little darling', 'little doll', 'miniature', 'diminutive'],
   'rude': ['impolite', 'discourteous', 'bad-mannered', 'insolent', 'uncouth', 'offensive', 'ill-mannered', 'vulgar', 'boorish', 'disrespectful', 'rough', 'abusive', 'blunt', 'coarse', 'crude', 'ignorant', 'insulting', 'intrusive', 'obscene',
-   'surly', 'uncivil', 'abrupt', 'barbarian', 'barbaric', 'barbarous', 'brusque', 'brutish', 'cheeky', 'churlish', 'crabbed', 'curt', 'graceless', 'gross', 'gruff', 'illiterate', 'impertinent', 'impudent', 'inconsiderate', 'loutish', 'low', 'offhand', 'peremptory', 'raw', 'savage', 'scurrilous', 'short', 'uncivilized', 'uncultured', 'uneducated', 'ungracious', 'unmannerly', 'unpolished', 'unrefined', 'wild', 'foul', 'foul-mouthed', 'indecent'],
+   'surly', 'uncivil', 'abrupt', 'barbarian', 'barbaric', 'barbarous', 'brusque', 'brutish', 'cheeky', 'churlish', 'crabbed', 'curt', 'graceless', 'gross', 'gruff', 'illiterate', 'impertinent', 'impudent', 'inconsiderate', 'loutish',
+    'low', 'offhand', 'peremptory', 'raw', 'savage', 'scurrilous', 'short', 'uncivilized', 'uncultured', 'uneducated', 'ungracious', 'unmannerly', 'unpolished', 'unrefined', 'wild', 'foul', 'foul-mouthed', 'indecent'],
   'horn': ['siren', 'klaxon', 'hooter', 'alarm', 'buzzer', 'bleeper', 'alert', 'signaling', 'device', 'caution', 'cry', 'signal', 'warning', 'whistle', 'Mayday SOS', 'bell', 'blast', 'call', 'clock',
    'drum', 'flap', 'flash', 'forewarning', 'gong', 'nod', 'scramble', 'scream', 'shout', 'sign', 'squeal', 'tip', 'tocsin', 'trumpet', 'wink', 'yell', 'high', 'sign', 'tip off', 'antler',
    'spine', 'barb', 'projection', 'tusk', 'point', 'spike', 'fork', 'hook', 'nib', 'spur', 'tine'],

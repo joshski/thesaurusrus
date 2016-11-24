@@ -1,5 +1,6 @@
 var http = require('http');
-var thesaurus = require('./filteredThesaurus');
+var Thesaurus = require('./filteredThesaurus');
+var thesaurus = new Thesaurus();
 var url = require('url');
 var querystring = require('querystring');
 
