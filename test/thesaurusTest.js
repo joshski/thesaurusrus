@@ -1,5 +1,6 @@
 var expect = require('chai').expect;
-var thesaurus = require('../filteredThesaurus');
+var Thesaurus = require('../filteredThesaurus');
+var thesaurus = new Thesaurus();
 
 describe('thesaurus', function() {
   it('does not return synonyms for single letter phrases', function() {
@@ -18,5 +19,10 @@ describe('thesaurus', function() {
     var shaftSynonyms = thesaurus.find('shaft');
     expect(shaftSynonyms.length).to.be.greaterThan(10);
     expect(shaftSynonyms.indexOf('cock')).to.equal(-1);
+  })
+
+  it('includes custom synonyms', function() {
+    var speedSynonyms = thesaurus.find('speed');
+    expect(speedSynonyms).to.eql(['pace', 'rate'])
   })
 })

@@ -4,7 +4,8 @@
   "description": "Finds synonyms",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
