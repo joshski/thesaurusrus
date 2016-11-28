@@ -1791,7 +1791,6 @@ module.exports = [
  "willie",
  "williewanker",
  "willy",
- "wine"
  "wine",
  "wn",
  "wog",
