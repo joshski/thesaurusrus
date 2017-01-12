@@ -1,6 +1,7 @@
 var thesaurus = require('thesaurus');
-var excludedWords = require('./excludedWords');
+var cache = require('memory-cache');
 var customSynonyms = require('./customSynonyms');
+
 function Thesaurus() {}
 
 Thesaurus.prototype = {
@@ -8,7 +9,6 @@ Thesaurus.prototype = {
     return this.findOriginal(phrase).concat(this.findCustom(phrase))
   },
   findCustom: function(phrase) {
-    var normalisedPhrase = phrase.toLowerCase();
     if (phrase.length == 1 || !customSynonyms[phrase]) {
       return [];
     }
@@ -16,6 +16,7 @@ Thesaurus.prototype = {
   },
   findOriginal: function(phrase) {
     var normalisedPhrase = phrase.toLowerCase();
+    var excludedWords = cache.get('excludedWords') || [];
     if (phrase.length == 1 || excludedWords.indexOf(normalisedPhrase) > -1) {
       return [];
     }
