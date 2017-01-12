@@ -878,6 +878,7 @@ module.exports = [
   "jebus",
   "jeez",
   "jelly donut",
+  "jerking",
   "jerkoff",
   "jerk off",
   "jesus",

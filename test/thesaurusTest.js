@@ -16,9 +16,9 @@ describe('thesaurus', function() {
   })
 
   it('filters profane synonyms', function() {
-    var shaftSynonyms = thesaurus.find('shaft');
-    expect(shaftSynonyms.length).to.be.greaterThan(10);
-    expect(shaftSynonyms.indexOf('cock')).to.equal(-1);
+    var jerkSynonyms = thesaurus.find('jerk');
+    expect(jerkSynonyms.length).to.be.greaterThan(10);
+    expect(jerkSynonyms.indexOf('jerking')).to.equal(-1);
   })
 
   it('includes custom synonyms', function() {
