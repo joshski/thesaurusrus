@@ -50,7 +50,6 @@ module.exports = [
   "assbagger",
   "assbandit",
   "assbanger",
-  "assbite",
   "assblaster",
   "assclown",
   "asscock",
