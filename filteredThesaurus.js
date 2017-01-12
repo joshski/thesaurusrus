@@ -1,5 +1,5 @@
 var thesaurus = require('thesaurus');
-var swearWords = require('./swearWords');
+var excludedWords = require('./excludedWords');
 var customSynonyms = require('./customSynonyms');
 function Thesaurus() {}
 
@@ -16,11 +16,11 @@ Thesaurus.prototype = {
   },
   findOriginal: function(phrase) {
     var normalisedPhrase = phrase.toLowerCase();
-    if (phrase.length == 1 || swearWords.indexOf(normalisedPhrase) > -1) {
+    if (phrase.length == 1 || excludedWords.indexOf(normalisedPhrase) > -1) {
       return [];
     }
     return thesaurus.find(normalisedPhrase).filter(function(word) {
-      return swearWords.indexOf(word) == -1 && word != normalisedPhrase;
+      return excludedWords.indexOf(word) == -1 && word != normalisedPhrase;
     });
   }
 };
