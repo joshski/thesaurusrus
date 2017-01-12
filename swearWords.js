@@ -669,7 +669,7 @@ module.exports = [
   "fugly",
   "fuk",
   "fuks",
-  "fumble"
+  "fumble",
   "funeral",
   "funfuck",
   "fungus",
