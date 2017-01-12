@@ -23,6 +23,6 @@ describe('thesaurus', function() {
 
   it('includes custom synonyms', function() {
     var speedSynonyms = thesaurus.find('speed');
-    expect(speedSynonyms).to.eql(['pace', 'rate'])
+    expect(speedSynonyms).to.include('pace', 'rate')
   })
 })
