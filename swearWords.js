@@ -2000,5 +2000,5 @@ module.exports = [
   "yiffy",
   "zigabo",
   "zipperhead",
-  "zoophilia",
+  "zoophilia"
 ]
