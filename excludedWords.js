@@ -2,7 +2,7 @@ var gsjson = require('google-spreadsheet-to-json');
 
 function excludedWords() {
   return gsjson({
-      spreadsheetId: '1T1w-7OScy_LMQPDRihv4uxfVzU8nUgCbpxeIGcQOmVY',
+      spreadsheetId: process.env.EXCLUDED_WORDS_SHEET_ID,
       listOnly: true
     }).then(function(results) {
       // Flatten two-dimensional array

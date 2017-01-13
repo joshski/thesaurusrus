@@ -2,15 +2,13 @@ var gsjson = require('google-spreadsheet-to-json');
 
 function customSynonyms() {
   return gsjson({
-      spreadsheetId: '1aAowFg2MbSGEQK1l6suxQpxMYoKLiOViktxt8ipYFEI',
+      spreadsheetId: process.env.CUSTOM_SYNONYMS_SHEET_ID
     }).then(function(results) {
       var flatObject = {};
-
       // Flatten array of objects
       results.forEach(function(element, index, array) {
         flatObject[array[index].word] = array[index].synonyms.split(', ');
       });
-
       return flatObject;
     })
     .catch(function(error) {
