@@ -6,8 +6,12 @@ var thesaurus = new Thesaurus();
 describe('thesaurus', function() {
   cache.put('excludedWords', [
     "sexy",
-    "spliff"
+    "spliff",
+    "speed"
   ]);
+  cache.put('customSynonyms', {
+    speed: [ 'pace' ]
+  });
 
   it('does not return synonyms for single letter phrases', function() {
     expect(thesaurus.find('a')).to.eql([]);

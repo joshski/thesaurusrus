@@ -1,6 +1,5 @@
 var thesaurus = require('thesaurus');
 var cache = require('memory-cache');
-var customSynonyms = require('./customSynonyms');
 
 function Thesaurus() {}
 
@@ -9,6 +8,7 @@ Thesaurus.prototype = {
     return this.findOriginal(phrase).concat(this.findCustom(phrase))
   },
   findCustom: function(phrase) {
+    var customSynonyms = cache.get('customSynonyms') || [];
     if (phrase.length == 1 || !customSynonyms[phrase]) {
       return [];
     }
