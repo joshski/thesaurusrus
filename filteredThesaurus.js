@@ -8,11 +8,12 @@ Thesaurus.prototype = {
     return this.findOriginal(phrase).concat(this.findCustom(phrase))
   },
   findCustom: function(phrase) {
+    var normalisedPhrase = phrase.toLowerCase();
     var customSynonyms = cache.get('customSynonyms') || [];
-    if (phrase.length == 1 || !customSynonyms[phrase]) {
+    if (phrase.length == 1 || !customSynonyms[normalisedPhrase]) {
       return [];
     }
-    return customSynonyms[phrase]
+    return customSynonyms[normalisedPhrase]
   },
   findOriginal: function(phrase) {
     var normalisedPhrase = phrase.toLowerCase();
