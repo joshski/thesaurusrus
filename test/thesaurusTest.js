@@ -5,12 +5,13 @@ var thesaurus = new Thesaurus();
 
 describe('thesaurus', function() {
   cache.put('excludedWords', [
-    "sexy",
-    "spliff",
-    "speed"
+    'sexy',
+    'spliff',
+    'speed'
   ]);
   cache.put('customSynonyms', {
-    speed: [ 'pace' ]
+    speed: [ 'pace' ],
+    bumpy: [ 'jarring' ]
   });
 
   it('does not return synonyms for single letter phrases', function() {
@@ -33,6 +34,11 @@ describe('thesaurus', function() {
 
   it('includes custom synonyms', function() {
     var speedSynonyms = thesaurus.find('speed');
-    expect(speedSynonyms).to.include('pace', 'rate')
+    expect(speedSynonyms).to.include('pace', 'rate');
+  })
+
+  it('removes duplicates from merged results', function() {
+    var bumpySynonyms = thesaurus.find('bumpy');
+    expect(bumpySynonyms.length).to.be.equal(5);
   })
 })

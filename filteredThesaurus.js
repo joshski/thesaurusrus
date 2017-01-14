@@ -3,9 +3,15 @@ var cache = require('memory-cache');
 
 function Thesaurus() {}
 
+function removeDuplicates(array) {
+  return array.filter(function(elem, pos) {
+    return array.indexOf(elem) == pos;
+  });
+}
+
 Thesaurus.prototype = {
   find: function(phrase) {
-    return this.findOriginal(phrase).concat(this.findCustom(phrase))
+    return removeDuplicates(this.findOriginal(phrase).concat(this.findCustom(phrase)));
   },
   findCustom: function(phrase) {
     var normalisedPhrase = phrase.toLowerCase();
