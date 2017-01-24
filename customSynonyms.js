@@ -7,8 +7,10 @@ function customSynonyms() {
       var flatObject = {};
       // Flatten array of objects
       results.forEach(function(element, index, array) {
-        if (array[index].synonyms) {
-          flatObject[array[index].word] = array[index].synonyms.split(', ');
+        var customResults = array[index].synonyms;
+        if (customResults) {
+          var trimmedResults = customResults.replace(/,\s*$/, '');
+          flatObject[array[index].word] = trimmedResults.split(', ');
         }
       });
       return flatObject;
