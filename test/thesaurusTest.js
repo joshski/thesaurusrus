@@ -19,7 +19,7 @@ describe('thesaurus', function() {
   })
 
   it('does not include the phrase in the results', function() {
-    expect(thesaurus.find('Happy').indexOf('happy')).to.eql(-1);
+    expect(thesaurus.find('chosen').indexOf('Chosen')).to.eql(-1);
   })
 
   it('filters undesirable phrases', function() {

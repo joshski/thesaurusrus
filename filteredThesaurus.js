@@ -9,27 +9,40 @@ function removeDuplicates(array) {
   });
 }
 
+function findWordIndex(array, word) {
+  return array.findIndex(function(item) {
+    return word === item.toLowerCase();
+  });
+}
+
 Thesaurus.prototype = {
   find: function(phrase) {
-    return removeDuplicates(this.findOriginal(phrase).concat(this.findCustom(phrase)));
-  },
-  findCustom: function(phrase) {
     var normalisedPhrase = phrase.toLowerCase();
-    var customSynonyms = cache.get('customSynonyms') || [];
-    if (phrase.length == 1 || !customSynonyms[normalisedPhrase]) {
-      return [];
+    var mergedResults = removeDuplicates(this.findOriginal(normalisedPhrase).concat(this.findCustom(normalisedPhrase)));
+
+    // Remove original phrase from results if present
+    var phraseIndexInResults = findWordIndex(mergedResults, normalisedPhrase);
+    if (phraseIndexInResults > -1) {
+      mergedResults.splice(phraseIndexInResults, 1);
     }
-    return customSynonyms[normalisedPhrase]
+
+    return mergedResults;
   },
   findOriginal: function(phrase) {
-    var normalisedPhrase = phrase.toLowerCase();
     var excludedWords = cache.get('excludedWords') || [];
-    if (phrase.length == 1 || excludedWords.indexOf(normalisedPhrase) > -1) {
+    if (phrase.length == 1 || excludedWords.indexOf(phrase) > -1) {
       return [];
     }
-    return thesaurus.find(normalisedPhrase).filter(function(word) {
-      return excludedWords.indexOf(word) == -1 && word != normalisedPhrase;
+    return thesaurus.find(phrase).filter(function(word) {
+      return excludedWords.indexOf(word) == -1;
     });
+  },
+  findCustom: function(phrase) {
+    var customSynonyms = cache.get('customSynonyms') || [];
+    if (phrase.length == 1 || !customSynonyms[phrase]) {
+      return [];
+    }
+    return customSynonyms[phrase]
   }
 };
 
