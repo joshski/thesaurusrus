@@ -1,4 +1,5 @@
 var gsjson = require('google-spreadsheet-to-json');
+var rollbar = require('rollbar');
 
 function customSynonyms() {
   return gsjson({
@@ -17,6 +18,7 @@ function customSynonyms() {
     })
     .catch(function(error) {
       console.log(error.stack);
+      rollbar.handleError(error);
     });
 }
 

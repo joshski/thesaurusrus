@@ -1,4 +1,5 @@
 var gsjson = require('google-spreadsheet-to-json');
+var rollbar = require('rollbar');
 
 function excludedWords() {
   return gsjson({
@@ -10,6 +11,7 @@ function excludedWords() {
     })
     .catch(function(error) {
       console.log(error.stack);
+      rollbar.handleError(error);
     });
 }
 

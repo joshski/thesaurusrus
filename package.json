@@ -16,6 +16,7 @@
   "dependencies": {
     "google-spreadsheet-to-json": "0.3.0",
     "memory-cache": "0.1.6",
+    "rollbar": "0.6.3",
     "thesaurus": "0.0.0"
   },
   "devDependencies": {
