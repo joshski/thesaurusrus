@@ -4,7 +4,7 @@
   "description": "Finds synonyms",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node --expose-gc server.js",
     "test": "mocha",
     "deploy": "git push https://git.heroku.com/thesaurusrus.git master"
   },

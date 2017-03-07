@@ -16,4 +16,6 @@ var server = http.createServer(function(req, res) {
 
 updateSheetsCache();
 
+global.gc();
+
 server.listen(process.env.PORT || 8007);
