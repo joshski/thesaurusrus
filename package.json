@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Finds synonyms",
   "main": "index.js",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "scripts": {
     "start": "node --expose-gc server.js",
     "test": "mocha",
