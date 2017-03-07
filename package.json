@@ -7,7 +7,7 @@
     "node": ">=7.6.0"
   },
   "scripts": {
-    "start": "node --expose-gc server.js",
+    "start": "node server.js",
     "test": "mocha",
     "deploy": "git push https://git.heroku.com/thesaurusrus.git master"
   },
