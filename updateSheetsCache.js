@@ -6,13 +6,13 @@ function updateSheetsCache() {
   getExcludedWords()
     .then(function(excludedWords) {
       cache.put('excludedWords', excludedWords);
-      console.log('[' + new Date().toUTCString() + '] excludedWords cache updated');
+      console.log('excludedWords cache updated');
     });
 
   getCustomSynonyms()
     .then(function(customSynonyms) {
       cache.put('customSynonyms', customSynonyms);
-      console.log('[' + new Date().toUTCString() + '] customSynonyms cache updated');
+      console.log('customSynonyms cache updated');
     });
 }
 
