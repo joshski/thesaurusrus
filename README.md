@@ -1,6 +1,6 @@
 # Thesaurusrus
 
-A child friendly thesaurus.
+Child friendly thesaurus powered by Google Sheets.
 
 - `npm start` start server (view at [http://localhost:8007/?phrase=test](http://localhost:8007/?phrase=test))
 - `npm test` run tests
